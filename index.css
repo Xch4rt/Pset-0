@@ -47,3 +47,40 @@ body{
 .tbl-border{
     border: 1px solid #dee2e6;
 }
+
+.bg{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.centered{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.InputStyle{
+    border-radius: 25px;
+}
+
+
+      
+.secondLine{
+    font-weight: 350;
+    font-size:15px;
+    margin-bottom: 15%;
+    color: white;
+}
+      
+.firstLine{
+    font-size: 30px;
+    color: white;
+}
+      
+@media only screen and (max-width: 600px) {
+    .firstLine{
+    font-size: 20px;
+    }
+}
