@@ -123,3 +123,9 @@ body{
         height: 100%;
     }
 }
+
+@media only screen and (max-width: 600px){
+    [class*="services"]{
+        margin-top: 150px;
+    }
+}
