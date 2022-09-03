@@ -1,0 +1,41 @@
+@mixin clamp($property, $min-size, $scaler, $max-size, $min-size-left:false, $scaler-left:false, $max-size-left:false){
+    @if $min-size-left == false {
+      #{$property}:$max-size; 
+      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"}; 
+      #{$property}:clamp($min-size, $scaler, $max-size);
+    } @else if $min-size-left == 0 or $min-size-left == auto{
+      #{$property}:$max-size $min-size-left; 
+      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"} $min-size-left;
+      #{$property}:clamp($min-size, $scaler, $max-size) $min-size-left;
+    } @else {
+      #{$property}:$max-size $min-size-left; 
+      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"} #{"min(max(#{$min-size-left}, #{$scaler-left}), #{$max-size-left})"}; 
+      #{$property}:clamp($min-size, $scaler, $max-size) clamp($min-size-left, $scaler-left, $max-size-left);
+    }
+}
+
+.index_{
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+    h1{
+        margin: 0px 0px 30px 4px;
+        @include clamp('font-size',14px, 5vw, 16px);
+    }
+
+    h3{
+        margin-top: 10px;
+        line-height: .9;
+    }
+
+    p{
+        margin: 20px 0px 0px;
+        max-width: 540px;
+    }
+}
+

@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xch4rt Portafolio</title>
     <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
 <body>
-  <div class="container-fluid position-relative p-1 fixed-top">
+  <div class="container-fluid position-fixed p-1 sticky">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
       <div class="collapse navbar-collapse">
         <div class="navbar-nav ms-auto py-0">
@@ -24,17 +25,38 @@
     <hr id="small_line">
   </div>
 
+  <div class="container1">
+  </div>
+
+  
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm h-100">
-        hola, aqui debe de ir un video jaja
-        <video autoplay muted loop id="myVideo">
-          <source src=" " type="video/mp4">
-        </video>
+      <div class="col-sm h-auto w-auto ">
+        <img src="../Imgs/pixel_me.png" class="img-fluid" alt="">
       </div>
-      <div class="col-sm h-auto">
-        <p>Hola, soy Pablo</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis aliquam libero natus autem laudantium assumenda esse, consequatur consequuntur hic sequi. Esse quae minus, aliquid eaque cupiditate distinctio in! Maxime, quisquam.</p>
+      <div class="col-sm h-auto index_" id="Scrollable_div">
+        <div>
+          <h1>Hola, mi nombre es</h1>
+        </div>
+        <div>
+          <h2>Pablo Gutiérrez</h2>
+        </div>
+        <div >
+          <h3>Soy desarrollador backend</h3>
+        </div>
+        <div >
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia rerum, officiis ea modi minima cum voluptatibus dolore aliquam voluptates sit eius rem cupiditate dolorum a iusto fugit minus voluptate doloribus.</p>
+        </div>
+        <div>
+          <p>Estas son algunas de las tecnologias con las que trabajo:</p>
+        </div>
+        <ul class="skills">
+          <li>C#</li>
+          <li>.Net</li>
+          <li>Javascript</li>
+          <li>Sql Server</li>
+          <li>Node.js</li>
+        </ul>
       </div>
     </div>
   </div>
